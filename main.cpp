@@ -11,8 +11,8 @@ Creates rectangle class
 class Rectangle {
 public:
 	Rectangle(double w,double h);
-	int get_perimeter() const;
-	int get_area() const;
+	double get_perimeter() const;
+	double get_area() const;
 	void resize(double factor);
 private:
 	double width;
@@ -24,15 +24,23 @@ Rectangle::Rectangle(double w, double h) {
 	height = h;
 }
 
-int Rectangle::get_perimeter() const {
+double Rectangle::get_perimeter() const {
 	return (width * 2) + (height * 2);
 }
 
-int Rectangle::get_area() const {
+double Rectangle::get_area() const {
 	return height * width;
 }
 
 void Rectangle::resize(double factor) {
 	height *= factor;
 	width *= factor;
+}
+
+int main() {
+	Rectangle r1 = {3.7, 13.3};
+	std::cout << r1.get_area() << std::endl;
+	
+	return 0;
+
 }
