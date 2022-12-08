@@ -1,3 +1,11 @@
+/*
+Author: Anita Prova
+Course: CSCI-135
+Instructor: Genady Maryash
+Assignment: E9.5
+Creates rectangle class
+*/
+
 #include <iostream>
 
 class Rectangle {
@@ -25,6 +33,6 @@ int Rectangle::get_area() const {
 }
 
 void Rectangle::resize(double factor) {
-	height *= 2;
-	width *= 2;
+	height *= factor;
+	width *= factor;
 }
